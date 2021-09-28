@@ -160,7 +160,7 @@ def download_individual(videos_list: list[list[str]]):
     for line in range(1, album_length):
         yt_url = videos_list[line][0]
         song_name = clean_file_pathorname(videos_list[line][1])
-        print("\nDownloading '%s' from YouTube with URL %s." % (song_name, yt_url))
+        print("\tDownloading '%s' from YouTube with URL %s." % (song_name, yt_url))
         yt = pytube.YouTube(yt_url)  # Make YouTube object with pytube
         mp4_name = "%s.mp4" % song_name  # Set the name for the new .mp4 file
         download_video(yt, mp4_name)  # Download 128kbps .mp4 stream
@@ -173,7 +173,7 @@ def download_playlist(videos_list: list[list[str]]):
     for line in range(1, album_length):
         yt = playlist.videos[line - 1]  # Get YouTube object from playlist
         song_name = videos_list[line][0]
-        print("\nDownloading song '%s' from YouTube." % song_name)
+        print("\tDownloading song '%s' from YouTube." % song_name)
         # Set the name for the new .mp4 file
         mp4_name = "%s.mp4" % clean_file_pathorname(song_name)
         download_video(yt, mp4_name)  # Download 128kbps .mp4 stream
@@ -181,7 +181,7 @@ def download_playlist(videos_list: list[list[str]]):
 
 def download_album(videos_list: list[list[str]]):
     yt_url = videos_list[0][2]
-    print("\nDownloading '%s' from YouTube with URL %s." % (album_info_dict.get("album_name"), yt_url))
+    print("\tDownloading '%s' from YouTube with URL %s." % (album_info_dict.get("album_name"), yt_url))
     yt = pytube.YouTube(yt_url)  # Make YouTube object with pytube
     mp4_name = "%s.mp4" % clean_file_pathorname(album_info_dict.get("album_name"))  # Set the name for the new .mp4 file
     download_video(yt, mp4_name)  # Download 128kbps .mp4 stream
@@ -269,7 +269,7 @@ def change_mp3_attributes(mp3_path: str, song: str, artist: str, album: str, tra
     print("| SONG NAME:", song,
           "| ARTIST:", artist,
           "| ALBUM:", album,
-          "| TRACK NUMBER:", tracknumber, " |")
+          "| TRACK NUMBER:", tracknumber, " |\n")
     # Note for future edits: see valid EasyID3 keys with print(EasyID3.valid_keys.keys())
     audio = EasyID3(mp3_path)
     audio["title"] = song
@@ -290,7 +290,8 @@ def play_all_songs():
         r"ExecutionPolicy Bypass" "\n"
         r'Write-Host "Playing all music in folder"' "\n"
         r"# Search for iTunes COM object -->" "\n"
-        r'Get-CimInstance Win32_COMSetting|Select-Object ProgId, Caption|Where-Object Caption -ILike "*itunes*"' "\n"
+        r'Get-CimInstance Win32_COMSetting
+        Select-Object ProgId, Caption|Where-Object Caption -ILike "*itunes*"' "\n"
         r"" "\n"
         r"# Instantiate a new iTunes.Application.1 object" "\n"
         r"$itunes = New-Object -ComObject iTunes.Application.1" "\n"
