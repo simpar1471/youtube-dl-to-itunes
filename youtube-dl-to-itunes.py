@@ -104,8 +104,6 @@ def validate_text_file(textfile: list[str]) -> bool:
         return True
     elif re.search("[\w\s]+( : )[\w\s]+( : )[\w\s]+( : )((\d+):(\d+))", textfile_str01):
         return True
-    # print(re.search(".*( : ).*( : ).*( : )((\d\d):(\d\d))",
-    # r"Death Grips : Exmilitary : https://www.youtube.com/watch?v=iPtPo8Sa3NE : 48:30"))
 
 
 def set_parsing_method(input_list):
