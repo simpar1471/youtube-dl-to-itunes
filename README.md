@@ -33,7 +33,7 @@ To use on **Windows**:
           pip install pytube moviepy mutagen
 
 4. Download [iTunes](https://www.apple.com/uk/itunes/download/index.html) if you want `youtube-dl-to-itunes.py` to open your new mp3 files in iTunes.
-5. Download [youtube-dl-to-itunes.py](), place it in this folder, and run it. By default it will both attempt to download your mp3s to the home Music folder (i.e. `C:\Users\CURRENTUSER\Music`) open iTunes. 
+5. Download [youtube-dl-to-itunes.py](https://github.com/simpar1471/youtube-dl-to-itunes/blob/main/youtube-dl-to-itunes.py), place it in this folder, and run it. By default it will both attempt to download your mp3s to the home Music folder (i.e. `C:\Users\CURRENTUSER\Music`) open iTunes. 
 
 #### For security:
 When you no longer want Powershell scripts to run, use `Set-ExecutionPolicy Restricted` in Powershell. 
