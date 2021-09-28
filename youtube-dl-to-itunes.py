@@ -290,8 +290,7 @@ def play_all_songs():
         r"ExecutionPolicy Bypass" "\n"
         r'Write-Host "Playing all music in folder"' "\n"
         r"# Search for iTunes COM object -->" "\n"
-        r'Get-CimInstance Win32_COMSetting
-        Select-Object ProgId, Caption|Where-Object Caption -ILike "*itunes*"' "\n"
+        r'Get-CimInstance Win32_COMSetting|Select-Object ProgId, Caption|Where-Object Caption -ILike "*itunes*"' "\n"
         r"" "\n"
         r"# Instantiate a new iTunes.Application.1 object" "\n"
         r"$itunes = New-Object -ComObject iTunes.Application.1" "\n"
