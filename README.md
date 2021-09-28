@@ -1,5 +1,5 @@
 # youtube-dl-to-itunes
-Download mp4s from YouTube.com, convert the resulting mp4 to mp3, then attribute these mp3s with user-provided metadata. If desired, automatically play your songs in iTunes for future use.
+Download mp4s from YouTube.com, convert the resulting mp4 to mp3, then attribute these mp3s with user-provided metadata. If desired, automatically play your songs in iTunes for future use. Utilises the Python packages [pytube](https://github.com/pytube/pytube/), [moviepy](https://github.com/Zulko/moviepy) and [mutagen](https://github.com/quodlibet/mutagen).
 Provided in the public domain, etc. etc., so copy/modify as you wish. Written for Windows in Python 3.9 and Powershell.
 ## USAGE
 To use on **Windows**: 
