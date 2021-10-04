@@ -25,7 +25,7 @@ To use on **Windows**:
       SONG2_NAME : SONG2_START
       SONG3_NAME : SONG3_START
       ```
-2. Open (or install + open) [Powershell](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1) and run the following command: Also open (or install + open) [Powershell](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1) and run the following command:
+2. Open (or install + open) [Powershell](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1) and run the following command:
        
        Set-ExecutionPolicy RemoteSigned
 3. Install pytube, moviepy and mutagen using pip:
